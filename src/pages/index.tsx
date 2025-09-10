@@ -1,12 +1,13 @@
 import { useState } from "react";
 import {
-  Input,
   Modal,
   ModalContent,
   ModalHeader,
   ModalBody,
   Button,
   ModalFooter,
+  Tabs,
+  Tab,
 } from "@heroui/react";
 
 export default function IndexPage() {
@@ -21,9 +22,17 @@ export default function IndexPage() {
         <ModalContent>
           <ModalHeader>Modal Title</ModalHeader>
           <ModalBody>
-            <div className="flex flex-col gap-4">
-              <Input type="text" label="Name" />
-            </div>
+            <Tabs>
+              <Tab key="1" title="Tab 1">
+                <div>Tab 1 content</div>
+              </Tab>
+              <Tab key="2" title="Tab 2">
+                <div>Tab 2 content</div>
+              </Tab>
+              <Tab key="3" title="Tab 3">
+                <div>Tab 3 content</div>
+              </Tab>
+            </Tabs>
           </ModalBody>
           <ModalFooter>
             <Button onPress={() => setIsOpen(false)}>Close</Button>
